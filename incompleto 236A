@@ -1,0 +1,54 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <cctype>
+#include <string>
+
+//This is his method: if the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female. You are given the string that denotes the user name, please help our hero to determine the gender of this user by his method.
+
+
+using namespace std;
+
+int main()
+{
+   string palavra;
+   
+    cin >> palavra;
+    int iguais = 0;
+    int dif = 0;
+    
+    for (int i = 0 ; i < palavra.length() ; i++){
+        iguais = 0;
+        
+        for (int c = 0 ; c < palavra.length() ; c++){
+            
+        if (palavra[i] == palavra[c] && c != i){
+            //cout << palavra[i] << "igual a " << palavra[c] << endl;
+            //cout << palavra[i] << "indices : "  << i << palavra[c] << " indices : "  << c << endl;
+            iguais++;
+        }
+        
+        }
+        
+        if (iguais != 0){
+            cout << palavra[i] << "so tem um" << endl;
+            dif++;
+            
+        }
+    
+    
+    }
+    
+    if (dif%2 == 0){
+        cout <<"CHAT WITH HER!";
+    }
+    else{
+        cout <<"IGNORE HIM!";
+    }
+}
