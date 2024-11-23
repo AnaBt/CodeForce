@@ -1,0 +1,25 @@
+{
+    int n;
+    int digit;
+    int count_lucky;
+    cin >> n;
+    
+    while (n > 0){
+     digit = n % 10;
+        n /= 10;
+    cout << digit;
+     if (digit == 4 or digit == 7){
+         count_lucky++;
+     }
+    }
+    if (count_lucky == 4 or count_lucky == 7){
+        cout << "YES";
+    }
+    else {
+        cout << "NO";
+    }
+    
+
+
+    return 0;
+}
