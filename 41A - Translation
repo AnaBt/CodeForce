@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+ 
+int main()
+{
+    string s , t;
+    cin >> s;
+    cin >> t;
+    int controle = 0;
+    int tamanhoS = s.length();
+    int tamanhoT = t.length();
+    int b = tamanhoT-1;
+    for (int a = 0 ; a < tamanhoS ; a++){
+            if (s[a] == t[b]){
+                controle++;
+                //cout << s[a] << "igual a " << t[b] << endl;
+            }
+            b--;
+        }
+   
+    if (controle == tamanhoS && tamanhoS == tamanhoT){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
+}
