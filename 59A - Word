@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+ 
+int main()
+{
+    string palavra;
+    char upper;
+    int mai = 0;
+    int min = 0;
+    
+    //cout << "Sequencia de Pedras : " << endl;
+    cin >> palavra;
+    
+    for (char letra : palavra){
+        upper = (char) toupper(letra);
+        if (letra == upper){
+            mai++;
+        }
+        else {
+            min++;
+        }
+    }
+    
+    if (mai > min){
+        for (int i = 0 ; i <= palavra.length() ; i++){
+            palavra[i] = (char) toupper(palavra[i]);
+        }
+    }
+    else {
+        for (int i = 0 ; i <= palavra.length() ; i++){
+            palavra[i] = (char) tolower(palavra[i]);
+    }
+    }
+    cout << palavra;
+    
+ 
+    return 0;
+}
