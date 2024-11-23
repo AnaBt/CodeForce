@@ -1,0 +1,32 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+ 
+int main()
+{
+    string palavra;
+    int num;
+    int a = 0;
+    int d = 0;
+    cin >> num;
+    cin >> palavra;
+    
+    for (char letra : palavra){
+        if (letra == 65){
+            a++;
+        }
+        else {
+            d++;
+        }
+    }
+    if (a > d){
+        cout << "Anton";
+    }
+    else if (d > a){
+        cout << "Danik";
+    }
+    else {
+        cout << "Friendship";
+    }
+}
