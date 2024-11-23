@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+    string pedras;
+    int tirei = 0;
+    int i = 0;
+    int c = 1;
+    int n;
+    //cout << "Sequencia de Pedras : " << endl;
+    cin >> n;
+    cin >> pedras;
+    
+    while(c != pedras.length()){
+        if(pedras[i] == pedras[c]){
+             tirei++;
+        }
+        
+        i++;
+        c++;
+    }
+    cout << tirei;
+    return 0;
+}
