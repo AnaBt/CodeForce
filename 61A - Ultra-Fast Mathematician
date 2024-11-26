@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+    string bits1,bits2;
+    cin >> bits1;
+    cin >> bits2;
+    
+    if (bits1.length() == bits2.length()){
+    int array[bits1.length()] = {};
+    for( int i = 0 ; i < bits1.length() ; i++){
+        if (bits1[i] != bits2[i] ){
+           array[i] = 1;
+            }
+        else{
+            array[i] = 0;
+        }
+        }
+        
+    for ( int i = 0 ; i < bits1.length() ; i++){
+        cout <<array[i];
+    }
+    }
+}
