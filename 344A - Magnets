@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    int num;
+    string b12;
+    char b2a = 2;
+    int grupos = 1;
+    cin >> num;
+    
+    for( int i = 0 ; i < num ; i++){
+        cin >> b12;
+        if (b12[0] == b2a){
+            grupos++;
+        }
+        b2a = b12[1];
+    }
+    
+    cout << grupos;
+    
+}
