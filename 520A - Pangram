@@ -1,0 +1,46 @@
+
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+ 
+int main()
+{
+    int num;
+    int c = 0;
+    int j = 0;
+    cin >> num;
+    string palavra;
+    cin >> palavra;
+    char letras[num] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+    
+    if (palavra.length() >= 26){
+        
+         for (int i = 0 ; i <= palavra.length() ; i++){
+            palavra[i] = (char) toupper(palavra[i]);
+         }
+         
+        for (int i = 0 ; i < 26 ; i++){
+            c = 0;
+            for (int k = 0 ; k < palavra.length() ; k++){
+            if(letras[i] == palavra[k]){
+                c++;
+            }
+            }
+            //cout << letras[i] << "tem" << c++ << "\n";
+            if (c == 0){
+                cout <<"NO";
+                j = 1;
+                break;
+            }
+    }
+    if (j != 1){
+        cout <<"YES";
+    }
+  
+        
+}
+else{
+    cout <<"NO";
+}
+}
