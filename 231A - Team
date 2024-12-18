@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int num1 , num2 , num3;
+    int rodadas;
+    int contador = 0;
+    int problemas = 0;
+    
+    cin >> rodadas;
+    
+    for (int i = 0 ; i < rodadas ; i++){
+        
+        cin >> num1 >> num2 >> num3;
+        contador = 0;
+        
+        if (num1 == 1 ){
+            contador++;
+        }
+        if (num2 == 1){
+            contador++;
+        }
+        if (num3 == 1){
+            contador++;
+        }
+        
+        if (contador >= 2){
+            problemas++;
+        }
+    }
+    
+    cout << problemas;
+    
+}
